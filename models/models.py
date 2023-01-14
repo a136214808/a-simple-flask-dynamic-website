@@ -5,7 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer,DateTime
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('mysql+pymysql://c21122021:Zyc123456789@csmysql.cs.cf.ac.uk:3306/c21122021_flask_cmt120')
+engine = create_engine('mysql+pymysql://root:123456789@localhost:3306/flask_1?charset=utf8')
+#engine = create_engine('mysql+pymysql://c21122021:Zyc123456789@csmysql.cs.cf.ac.uk:3306/c21122021_test')
 Base = declarative_base()  # 生成SQLORM基类
 
 
