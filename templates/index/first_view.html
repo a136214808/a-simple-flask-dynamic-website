@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="noIE" lang="en-US">
+
+	<head>
+		<title>first_view</title>
+
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/assets/css/style.css" media="screen">
+
+	</head>
+
+	<body>
+		<div id="drawer-right">
+			<div class="text-right">
+				<a class="toggleDrawer" href="#">close</a>
+			</div>
+			<h2>Navigate</h2>
+			<nav>
+				<ul class="nav nav-pills nav-stacked">
+					<li>
+						<a href="/first_view/{{ user_email }}"> Home</a>
+					</li>
+					<li>
+						<a href="/about_me/{{ user_email }}"> About me</a>
+					</li>
+					<li>
+						<a href="/review/{{ user_email }}"> Review</a>
+					</li>
+					<li>
+						<a href="/profile/{{ user_email }}"> Resume</a>
+					</li>
+					<li>
+						<a href="/login">Logout</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<div id="wrapper">
+
+			<div id="header" class="content-block header-wrapper">
+				<div class="header-wrapper-inner">
+					<section class="top">
+						<div class="pull-left">
+							<h1 style="color:lightskyblue">Hello {{ user_name }} &nbsp</h1>
+						</div>
+						<div class="pull-right">
+							<a class="toggleDrawer" href="#">pull</a>
+						</div>
+					</section>
+					<section class="center">
+						<div class="slogan">
+							Personal Digitial Portfolio
+						</div>
+						<div class="secondary-slogan">
+                            Updating...
+						</div>
+					</section>
+				</div>
+			</div>
+
+
+			<div class="content-block" id="portfolio">
+				<div class="container">
+					<header class="block-heading">
+						<h1>About author</h1>
+						<p style="font-size: 20px;">You will know about what degree the author has studied</p>
+
+					</header>
+                    <br>
+					<section class="block-body">
+						<div class="row">
+
+							<div class="col-sm-4">
+                                <p style="font-size: 40px;">About flask</p>
+                                <p style="font-size: 20px;">The author is a novice, this is the first time to build a simple flask website. Nevertheless, author will continue to improve the basic structure even if it was submited beforehand.</p>
+							</div>
+
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/static/assets/images/Java.png)">
+
+								</a>
+							</div>
+
+							<div class="col-sm-4">
+                                 <p style="font-size: 40px;">Technical Skills</p>
+                                <p style="font-size: 18px;">Having learned so much computational languages throught out these years such as python, Java, c++, vue as well as the js that studied recently, the author hasn't decided which languages he should choose for his future career, albeit pros and cons they both have. The author firmly believes, with time passing by, He can find a language that he prefers to use.</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/static/assets/images/vue.png)">
+
+								</a>
+							</div>
+
+							<div class="col-sm-4">
+                                <p style="font-size: 40px;">Work Experience</p>
+                                <p style="font-size: 18px;">Acutally, The author has once worked in a company, but useless. He had done nothing at that time. So He thought the best way to acquire experience is to code on your own rather than others commands. The more websites or projects you build, the more experience you will have.</p>
+							</div>
+
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/static/assets/images/python.png)">
+
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+
+			<div class="content-block" id="blog">
+				<div class="container">
+					<header class="block-heading cleafix">
+						<h1>Look at others apprisal</h1>
+						<p>you will get the experience from what others said</p>
+					</header>
+					<section class="block-body">
+						<div class="row">
+
+                            {% for i in other_judges %}
+                            <div class="col-sm-4 blog-post">
+								<img src="/static/assets/images/1.png">
+								<h2>{{ i.email }}</h2>
+								<div class="date">{{ i.dateAdd }}</div>
+								<p>{{ i.content }}</p>
+                                    </div>
+                            {% endfor %}
+                        </div>
+					</section>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+		<script src="/static/assets/js/jquery-1.12.4.min.js"></script>
+		<script src="/static/assets/js/script.js"></script>
+
+	</body>
+</html>

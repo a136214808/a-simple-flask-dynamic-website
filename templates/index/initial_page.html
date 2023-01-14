@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    body{
+        {#reference: picture is from baidu images#}
+        background: url("../../static/assets/images/initial_page.jpg") no-repeat center center;
+	background-size: cover;
+	display: table;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	overflow-x: hidden;
+    }
+    h1{
+        position: absolute;
+        margin-top: 500px;
+    }
+    .second{
+        margin-top: 600px;
+    }
+    .button{
+  display: inline-block;
+  *display: inline;
+
+  zoom: 1;
+  padding: 10px 20px;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  overflow: visible;
+  font: bold 13px arial, helvetica, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+        position: relative;
+  color: #555;
+    margin-top: 700px;
+        margin-left: 200px;
+    }
+</style>
+<body>
+    <h1 style="color:whitesmoke">This is a digital individual portfolio</h1>
+    <h1 style="color:whitesmoke" class="second">Are you ready to come with me?</h1>
+    <div class="centered">
+      <button class="small button" onclick="window.location.href='/login'">Let's get started</button>
+    </div>
+</body>
+</html>

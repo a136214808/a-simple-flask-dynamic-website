@@ -1,0 +1,61 @@
+{% extends 'index/navigate.html' %}
+{% block other %}
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/about_me.css">
+<section>
+<header>
+	<div class="desc">Your Personal Information</div>
+	<div class="desc"></div>
+</header>
+	<form action="/about_me/{{ user_email }}" method="post">
+		<div class="register-box">
+					<label for="username" class="username_label" >name
+			<input maxlength="20" type="text" placeholder="please input your name" name="name" value="{{ name }}">
+					</label>
+			<div class="tips">
+
+			</div>
+		</div>
+
+		<div class="register-box">
+			<label for="username" class="other_label" >Current Address
+			<input maxlength="20" type="text" placeholder="where you live now" name="Caddress" value="{{ caddress }}">
+			</label>
+			<div class="tips">
+			</div>
+
+			</div>
+			<div class="register-sex">
+				<label for="username" class="other_label" >Sex
+				<input id=  'sex' type="radio" name="gender" value="0">M
+				<input id = 'sex' type="radio" name="gender" value="1">F
+				</label>
+                {{ sex }}
+				<div class="tips">
+				</div>
+				</div>
+
+		<div class="register-box">
+			<label for="username" class="other_label" >Home Address
+			<input maxlength="20" type="text" placeholder="input your family address" name="Haddress" value="{{ haddress }}">
+			</label>
+			<div class="tips">
+			</div>
+		</div>
+
+		<div class="register-box">
+			<label for="username" class="other_label" >Phone
+			<input maxlength="20" type="text" placeholder="your mobile phone number" name="phone" value="{{ phone }}">
+			</label>
+		</div>
+		<div class="register-box">
+			<label for="username" class="other_label" name="school">Graduation school
+			<input maxlength="20" type="text" placeholder="school you graduated" name="school" value="{{ school }}">
+			</label>
+		</div>
+
+		<div class="submit_btn">
+					<button type="submit" id="submit_btn">save</button>
+		</div>
+	</form>
+</section>
+{% endblock %}

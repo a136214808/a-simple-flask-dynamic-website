@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html class="noIE" lang="en-US">
+
+	<head>
+
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/assets/css/style.css" media="screen">
+
+	</head>
+
+	<body>
+		<div id="drawer-right">
+			<div class="cross text-right">
+				<a class="toggleDrawer" href="#">close</a>
+			</div>
+			<h2>Navigate</h2>
+			<nav>
+				<ul class="nav nav-pills nav-stacked">
+					<li>
+						<a href="/first_view/{{ user_email }}"><i class="fa fa-home"></i> Home</a>
+					</li>
+					<li>
+						<a href="/about_me/{{ user_email }}"><i class="fa fa-bookmark"></i> About me</a>
+					</li>
+					<li>
+						<a href="/review/{{ user_email }}"><i class="fa fa-tasks"></i> Review</a>
+					</li>
+					<li>
+						<a href="/profile/{{ user_email }}"><i class="fa fa-wordpress"></i> Resume</a>
+					</li>
+					<li>
+						<a href="/login"><i class="fa fa-heart"></i> Logout</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+		<div id="wrapper">
+					<section class="top clearfix">
+						<div class="pull-right">
+							<a class="toggleDrawer" href="#">pull</a>
+						</div>
+					</section>
+		</div><!--/#wrapper-->
+
+{% block other %}
+{% endblock %}
+
+        {% block others %}
+        {% endblock %}
+        {% block my_review %}
+        {% endblock %}
+        {% block other_people %}
+        {% endblock %}
+		<script src="/static/assets/js/jquery-1.12.4.min.js"></script>
+		<script src="/static/assets/js/script.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,14 @@
+gevent==22.10.2
+Flask ==2.2.2
+click
+Flask-Login
+Flask-SQLAlchemy
+Flask-WTF
+greenlet
+itsdangerous
+Jinja2
+MarkupSafe
+SQLAlchemy
+Werkzeug
+WTForms
+pymysql

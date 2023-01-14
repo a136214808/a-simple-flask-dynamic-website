@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Logins</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=login
+	/>
+	<link rel="stylesheet" href="/static/assets/css/login.css" type="text/css" media="all" />
+
+
+</head>
+
+<body>
+	<h1>
+		<span>W</span>elcome
+		<span>C</span>ome
+		<span></span>to
+        <span>L</span>ogin
+    </h1>
+
+
+	<div class="content-a" style="padding-top: 4em;">
+		<div class="subm">
+			<form action="/login" method="post">
+				<div class="formsty">
+					<label>Email</label>
+					<div class="poma">
+						<input placeholder="Email" name="Email" type="email" required="">
+						<span class="enve" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="formsty">
+					<label>Password</label>
+					<div class="poma">
+						<input placeholder="Password" name="Password" type="password" id="password1" required="">
+						<span class="ke" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="formsty">
+					<label>Confirm Password</label>
+					<div class="poma">
+						<input placeholder="Confirm Password" name="Confirm Password" type="password" id="password2" required="">
+						<span class="ke" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="suba">
+					<input type="checkbox" id="brand1" value="">
+					<label for="brand1">
+						<span></span>I Accept to the Terms & Conditions</label>
+				</div>
+				<div class="clear"></div>
+				<input type="submit" value="login">
+                <a href="/register" id="register">Register</a>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

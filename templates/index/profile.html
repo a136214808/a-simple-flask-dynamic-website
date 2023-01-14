@@ -1,0 +1,177 @@
+{% extends 'index/navigate.html' %}
+
+
+{% block other %}
+    <head>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .page {
+            left:50%;
+            margin-top: 50px;
+            margin-left: 200px;
+            background-color: white;
+            border: 2px solid lightblue;
+            height: 1000px;
+            width: 900px;
+        }
+
+        .left {
+            margin-top: 20px;
+            height: 1000px;
+            width: 225px;
+        }
+
+        h3 img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .i1 {
+            height: 120px;
+            windows: 100px;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        .right {
+            margin-left: 245px;
+            width: 630px;
+            height: 730px;
+            margin-top: -1000px;
+        }
+
+
+        h3 {
+            vertical-align: middle;
+        }
+
+        .name {
+            font: 700 25px 宋体;
+            margin-top: 20px;
+            margin-left: 75px;
+        }
+
+        .sex {
+            font: 400 20px 微软雅黑;
+            margin-top: 8px;
+            margin-left: 98px;
+        }
+
+        h2 {
+            font: 400 15px 微软雅黑;
+            margin: 10px 20px;
+        }
+
+        .contact {
+            font: 400 14px 微软雅黑;
+            margin-top: 15px;
+            line-height: 25px;
+        }
+
+        .base {
+            margin-left: 20px;
+        }
+
+        .base dt {
+            padding-top: 15px;
+        }
+
+        .base dd {
+            padding-top: 8px;
+            font: 400 15px 微软雅黑;
+        }
+
+        .right dt {
+            padding-top: 15px;
+        }
+
+        .judge {
+
+            margin-top: 0;
+        }
+
+        .submit_btn button{
+	width: 30%;
+    height: 54px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+}
+
+
+    </style>
+    <title>resume</title>
+</head>
+ <div class="page">
+        <div class="left">
+            <img class="i1" src="/static/assets/images/passby.jpeg" alt="">
+            <dl class="base">
+            <br>
+            <dt><h4>Name:</h4>
+                <dd style="font-size: 20px;">{{ obj.name }}</dd>
+                <br>
+            <dt><h4>Sex:</h4>
+                <dd style="font-size: 20px;">{{ obj.sex }}</dd>
+                <br>
+
+               <dt><h4>Telephone:</h4>
+                <dd>{{ obj.phone }}</dd>
+                <br>
+                <dt><h4>Email:</h4>
+                <dd>{{ obj.email }}</dd>
+                <br>
+               <dt><h4>Current Address:</h4>
+                <dd>{{ obj.caddress }}</dd>
+                <br>
+                <dt><h4>Home address:</h4>
+                <dd>{{ obj.haddress }}</dd>
+                <br>
+                <dt><h4>Graduation school:</h4>
+                    <dd>{{ obj.school }}</dd>
+
+            </dl>
+        </div>
+        <div class=right>
+            <form action="/profile/{{ obj.email }}" method="POST">
+            <dl>
+                <dt><h3>Self-evaluation</h3></dt>
+                <dd class="judge">
+                    <textarea name="se" id="" cols="65" rows="5">{{ se }}</textarea>
+                </dd>
+
+                <dt> <h3>Educational Background</h3></dt>
+
+                <dd class="judge">
+                    <label for=""><textarea name="eb" id="" cols="65" rows="5" >{{ eb }}</textarea></label>
+                </dd>
+                <br>
+                <dt> <h3>School Experience</h3></dt>
+                <dd class="judge">
+                    <textarea name="sex" id="" cols="65" rows="5">{{ sex }}</textarea>
+                </dd>
+                <br>
+                <dt> <h3>Others</h3></dt>
+                <dd class="judge">
+                    <textarea name="ot" id="" cols="65" rows="5">{{ ot }}</textarea>
+                </dd>
+            </dl>
+                <br><br>
+                <div class="submit_btn" style="margin-left: 30px;">
+					<button type="submit" id="submit_btn">save</button>
+					<button type="submit" id="submit_btn" onClick="javascript:window.print()" style="margin-left: 60px">print</button>
+
+		</div>
+        </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+

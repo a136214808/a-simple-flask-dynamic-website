@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Classic Register Form Responsive Widget Template :: w3layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+
+
+
+	<link rel="stylesheet" href="/static/assets/css/register.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+	<h1>
+        Welcome to register
+    </h1>
+	<div class="main-content-agile">
+		<div class="sub-main-w3">
+			<form action="#" method="post">
+				<div class="form-style-agile">
+					<label>Your Name</label>
+					<div class="pom-agile">
+						<input placeholder="Your Name" name="Name" type="text" id='Name' required="">
+						<span class="fa fa-user-o" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="form-style-agile">
+					<label>Email</label>
+					<div class="pom-agile">
+						<input placeholder="Email" name="Email" type="email" required="">
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="form-style-agile">
+					<label>Password</label>
+					<div class="pom-agile">
+						<input placeholder="Password" name="Password" type="password" id="password1" required="">
+						<span class="fa fa-key" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="form-style-agile">
+					<label>Confirm Password</label>
+					<div class="pom-agile">
+						<input placeholder="Confirm Password" name="Confirm Password" type="password" id="password2" required="">
+						<span class="fa fa-key" aria-hidden="true"></span>
+					</div>
+				</div>
+				<div class="sub-agile">
+					<input type="checkbox" id="brand1" value="" checked>
+					<label for="brand1">
+						<span></span>I Accept to the Terms & Conditions</label>
+				</div>
+				<div class="clear"></div>
+				<input type="submit" value="Register" class="login-btn">
+			</form>
+		</div>
+	</div>
+
+	<div class="footer">
+		<h2>&copy; a common Register Form
+		</h2>
+	</div>
+
+    <script src="/static/assets/js/register.js"></script>
+    <script src="/static/assets/js/jquery-1.12.4.min.js"></script>
+
+
+	<script>
+        $(".login-btn").click(function(){
+    var email = $("#email").val();
+    var username = $("#user").val();
+    var password = $("#password").val();
+    var verify = $("#verify").val();
+
+    $.ajax({
+    url: "{{ url_for('.register') }}",
+    type: 'post',
+    data: {
+    'email':email,
+    'username':username,
+    'password':password,
+    'verify':verify
+},
+    success: function(data){
+    status = data.status;
+    errmsg = data.errmsg;
+    layer.msg(errmsg);
+    if(status===0){
+    setTimeout(function(){
+    window.location.href = "{{ url_for('.register') }}";
+}, "2000");
+}
+}
+})
+});
+
+addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+</script>
+
+
+</body>
+
+</html>

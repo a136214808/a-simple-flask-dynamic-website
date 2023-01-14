@@ -1,0 +1,299 @@
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+
+
+body {
+    background-color: #0BE093;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+
+}
+
+
+
+h1 {
+    font-size: 50px;
+    color: #fff;
+    font-style: italic;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 span {
+    color: #2162f3;
+}
+
+
+
+.sub-main-w3 {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.sub-main-w3 form {
+    max-width: 50%;
+    margin: 10px 10px;
+    padding: 100px;
+    width:45%;
+    height:80%;
+    box-sizing: border-box;
+
+    flex-wrap: wrap;
+    background: #fff;
+}
+
+.form-style-agile {
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+
+.sub-main-w3 label {
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.pom-agile {
+    padding: 5px 15px;
+    background: transparent;
+    margin-bottom: 16px;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content:  space-between;
+    justify-content:  space-between;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: none;
+    box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.pom-agile input[type="text"],
+.pom-agile input[type="email"],
+.pom-agile input[type="password"] {
+    outline: none;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    flex-basis: 92%;
+    -webkit-flex-basis: 92%;
+}
+
+.sub-main-w3 input[type="submit"] {
+    color: #fff;
+    background: #2162f3;
+    border: none;
+    padding: 13px 0;
+    margin-top: 30px;
+    outline: none;
+    width: 52%;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.sub-main-w3 input[type="submit"]:hover {
+    background: red;
+    transition: 0.1s all;
+}
+
+
+.sub-agile input[type="checkbox"] {
+    display: none;
+}
+
+.sub-agile input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+    display: inline-block;
+    font-size: .9em;
+    color: #000;
+    cursor: pointer;
+}
+
+.sub-agile input[type="checkbox"]+label span:first-child {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border: 1px solid #000;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+}
+
+.sub-agile input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    position: absolute;
+    background: url(../images/tick.png)no-repeat;
+    left: 2px;
+    top: 3px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+.footer h2 {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.8;
+}
+

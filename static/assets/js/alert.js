@@ -1,0 +1,1 @@
+alert('please input your email or email')

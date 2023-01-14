@@ -1,0 +1,76 @@
+{% extends 'index/navigate.html' %}
+{% block other %}
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/about_me.css">
+<header>
+	<div class="desc">welcome to review page</div>
+	<div class="desc"></div>
+</header>
+{% endblock %}
+
+{% block others %}
+    <style>
+.submit_btn button{
+
+    position: relative;
+	width: 35%;
+    height: 54px;
+    color: #fff;
+    background: green;
+    border: 0;
+    font-size: 16px;
+    margin-left: 120px;
+}
+#textarea{
+    position: relative;
+    margin-left: -80px;
+}
+
+    </style>
+    <form action="/review/{{ user_email }}" method="POST">
+        <h3>What do you want to talk to us?</h3>
+        <label for=""><textarea name="content" id="textarea" cols="60" rows="10" style="margin-right:10px;"></textarea></label>
+
+        <div class="submit_btn">
+            <br>
+					<button type="submit" id="submit_btn">publish</button>
+    </div>
+    </form>
+{% endblock %}
+{% block my_review %}
+    <style>
+    .my{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .content{
+        width:90%;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 15px 0 15px 0;
+    }
+    span{
+        float:right;
+    }
+    .btn{
+        position: relative;
+        float: right;
+        margin-top: -50px;
+        margin-left: -20px;
+    }
+    </style>
+
+    <div class="my">
+        <hr>
+        <h3>my_view</h3>
+        {% for i in my_judge %}
+    <div class="content">
+        {{ i.content }} <span>{{ i.dateAdd }}</span>
+    </div>
+    <button class="btn" type="button" name="done" onclick="location.href='/review/{{ i.email }}/{{ i.id }}'">Delete</button>
+        {%  endfor %}
+    </div>
+
+{% endblock %}
+
+
+
